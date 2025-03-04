@@ -1,16 +1,39 @@
+algoritmo "Nome Completo e Sobrenome"
+var
+   primeiroNome, sobrenome: caractere
+inicio
+   escreva("Digite o primeiro nome: ")
+   leia(primeiroNome)
+   escreva("Digite o sobrenome: ")
+   leia(sobrenome)
+
+   escreva("Nome completo: ", primeiroNome, " ", sobrenome)
+   escreva("\nO sobrenome √©: ", sobrenome)
+fimalgoritmo
+
+
+
+=====================================================================================================================
+
 algoritmo "Extrair Sobrenome"
 var
-   nomeCompleto, sobrenome: cadeia
+   nomeCompleto, nome, sobrenome: caractere
    posicao: inteiro
 inicio
    escreva("Digite o nome completo (Nome + Sobrenome): ")
    leia(nomeCompleto)
 
-   posicao <- posicao(" ", nomeCompleto)  // Encontra a posiÁ„o do espaÁo
-   se posicao > 0 entao
-      sobrenome <- subcadeia(nomeCompleto, posicao + 1, comprimento(nomeCompleto))
+   posicao <- posicao(" ", nomeCompleto)
+
+   se posicao > 0 ent√£o
+      sobrenome <- subcadeia(nomeCompleto, posicao + 1, comprimento(nomeCompleto) - posicao)
       escreva("Sobrenome: ", sobrenome)
    senao
-      escreva("Nome inv·lido. Digite Nome e Sobrenome.")
+      escreva("Nome inv√°lido. Digite Nome e Sobrenome.")
    fimse
 fimalgoritmo
+
+
+
+
+ 
